@@ -12,7 +12,8 @@ Ausgangspunkt sind folgende Datensets, die im Zusammenhang mit einer Sensitivit�
 X. Sensitivitäts-Experiment X
 Bitte überlegt euch verschiedene Analyseworkflows, die zur Auswertung der Experimente angewendet werden können!
 
-EXP_startyear uu nicht ab 1990, sondern anderer Datenzeitraum. 
+
+---- Notizen und Fehlerquellen -----
 
 EXP_INIDATA_PATH: /daten/vast/arch/vast-production/models/c50clm6/ini/set1/	#muss angepasst werden, fuer die richtigen Randdaten! Zeitraume und Variablen unterscheiden sich. Standardwert (hier) Dateien haben 20 level. alle anderen Daten (dort) 40 Level.
 
@@ -20,6 +21,15 @@ Wahl zwischen Leapfrog und Rungekutta (dynamics, Schalter, T/F)
 INP_LAF = False (dann werden die neuen Daten mit 40 leveln verwendet)
 Die verschiedenen Randdaten werden in der Notiz "Beschreibung der Datensets zum CCLM5.x" beschrieben.
 
-Ref:    LAF=False! (dann werden die neuen Daten verwendet)
-DT300:  dt 150 -> 300
-Leapfrog: DYNCTL_L2TLS True -> False (wechsel von Runge-Kutta zu Leapfrog)
+Ref:
+-LAF=False! (dann werden die neuen Daten verwendet, Randdaten folgende Zeile, )
+-"/daten/medusa/users/arch/CLM5_LABF/LABF-CCLM5.x-eraint_dkrz-indien_05000-soil_9a/" Dieser Pfad muss fuer die ini-Daten verwendet werden. Wichtig ist der Slash "/" am Ende!
+-Start-Day 1, stop-day 30. (Januar 1990)
+-cycles und hours_per_cycle: default.
+
+Experimente:
+-DT300:  dt 150 -> 300
+-Leapfrog: DYNCTL_L2TLS True -> False (wechsel von Runge-Kutta zu Leapfrog)
+
+
+
