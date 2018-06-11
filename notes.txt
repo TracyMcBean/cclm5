@@ -1,1 +1,25 @@
 Notes
+
+1. Schritt:
+Referenz sind Randdaten (obs) vom Modell. Grobes globales Gitter existiert auch im feinen Modell. "initial file" pfad für randdaten suchen. Mehrwert des Modells wird dadurch sichtbar (höhere Auflösung)
+
+BB:Analysemöglichkeiten CCLM-Experimente
+Ausgangspunkt sind folgende Datensets, die im Zusammenhang mit einer Sensitivitätsstudie erstellt werden bzw. vorliegen
+1. Referenzdaten (werden am Rand als Antrieb benutzt) #fuer europa oder andere region
+2. Referenzsimulation (Basisexperiment mit Standardeinstellung von Steuerparametern)
+3. Sensitivitäts-Experiment A
+....
+X. Sensitivitäts-Experiment X
+Bitte überlegt euch verschiedene Analyseworkflows, die zur Auswertung der Experimente angewendet werden können!
+
+EXP_startyear uu nicht ab 1990, sondern anderer Datenzeitraum. 
+
+EXP_INIDATA_PATH: /daten/vast/arch/vast-production/models/c50clm6/ini/set1/	#muss angepasst werden, fuer die richtigen Randdaten! Zeitraume und Variablen unterscheiden sich. Standardwert (hier) Dateien haben 20 level. alle anderen Daten (dort) 40 Level.
+
+Wahl zwischen Leapfrog und Rungekutta (dynamics, Schalter, T/F)
+INP_LAF = False (dann werden die neuen Daten mit 40 leveln verwendet)
+Die verschiedenen Randdaten werden in der Notiz "Beschreibung der Datensets zum CCLM5.x" beschrieben.
+
+Ref:    LAF=False! (dann werden die neuen Daten verwendet)
+DT300:  dt 150 -> 300
+Leapfrog: DYNCTL_L2TLS True -> False (wechsel von Runge-Kutta zu Leapfrog)
