@@ -31,5 +31,11 @@ Experimente:
 -DT300:  dt 150 -> 300
 -Leapfrog: DYNCTL_L2TLS True -> False (wechsel von Runge-Kutta zu Leapfrog)
 
+showcases:
+1: Experiment mit Randdaten vergleichen
+2: zwei Experimente miteinander vergleichen
+3: irgendwas mit Statistik (funktioniert aber nicht. Verzeichnis "vast-work" existiert nicht) 
+4: Auswertung der Verschiedenen Startzeiten mit der ganzen Gruppe.
+Ich werde mir wohl eher meine eigenen Skripte schreiben, um die nc-Daten zu bearbeiten.
 
 
