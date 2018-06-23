@@ -32,6 +32,7 @@ Ref:
 Experimente:
 -DT300:  dt 150 -> 300
 -Leapfrog: DYNCTL_L2TLS True -> False (wechsel von Runge-Kutta zu Leapfrog)
+-mit Leapfrog: Änderung des Epsilonwertes für Robert-Asselin-Filter
 
 showcases:
 1: Experiment mit Randdaten vergleichen
